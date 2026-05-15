@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+:root {
+  --texto1: #1a1a1a;
+  --texto2: #fefefe;
+  --detalhes: #c5a059;
+  --fundo: #f9f9f7;
+  --superficie: rgb(153, 153, 153);
+  --font1: "Playfair Display", serif;
+  --font2: "Baskervville", "Times New Roman", Times, serif;
+  --font3: "Cormorant Upright", serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--fundo);
+}
+.hero {
+  height: 100vh;
+  background-image: url("../img.jpg/homenss.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+nav {
+  background-color: var(--fundo);
+  display: flex;
+  padding: 0 30px;
+  height: 50px;
+  gap: 30px;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+}
+nav a {
+  text-decoration: none;
+  color: var(--texto1);
+  font-family: var(--font2);
+  font-size: 13px;
+  font-weight: 700;
+
+  display: flex;
+  justify-content: right;
+}
+nav a:hover {
+  color: var(--superficie);
+}
+.icons {
+  display: flex;
+  margin-left: auto;
+  gap: 20px;
+}
+.icons svg:hover {
+  fill: var(--superficie); /*muda a cor dos icones*/
+}
+.colecao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: auto;
+  gap: 1%;
+}
+.box-colecao {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.8s ease,
+    opacity 0.3s;
+}
+.grid-imagens {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  gap: 10px;
+}
+.colecao {
+  display: flex;
+  flex-direction: column; /* Empilha a introdução em cima do grid */
+  align-items: center;
+  padding: 80px 0;
+  width: 100%;
+}
+
+.intro-colecao {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.intro-colecao h1 {
+  font-family: var(--font1);
+  font-size: 3rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.intro-colecao p {
+  font-family: var(--font3);
+  font-size: 1.1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--superficie);
+  font-weight: 900;
+}
+.box-colecao img {
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 20px;
+}
+.box-colecao:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
+.text-colecao {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+}
+
+.botao-colecao-comprar {
+  text-decoration: none;
+  color: var(--texto2);
+  font-family: var(--font3);
+  font-weight: 500;
+  font-size: medium;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: var(--detalhes);
+  display: flex;
+  justify-content: center;
+}
+figcaption {
+  color: var(--texto2);
+  font-family: var(--font1);
+  font-size: xx-large;
+  font-weight: 500;
+}
+.categorias {
+  display: flex;
+  justify-content: space-evenly; 
+  margin-top: 200px;
+  width: 100%;
+  height: 100vh;
+
+}
+.categorias section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--font1);
+  font-size: 14px;
+  letter-spacing: 5px; 
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-color: var(--detalhes);
+  text-transform: uppercase;
+}
+
+.categorias img {
+  max-width: 100%;
+  object-fit: cover;
+  transition:
+    transform 0.5s ease-in-out,
+    opacity 0.9s ease-in-out;
+    
+
+}
+.categorias img:hover {
+  opacity: 0.8;
+  transform: scale(1.03);
+}
