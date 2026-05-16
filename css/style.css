@@ -27,7 +27,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
+} /*imagem de destaque dos tres modelos*/
 
 nav {
   background-color: var(--fundo);
@@ -37,30 +37,33 @@ nav {
   gap: 30px;
   align-items: center;
   position: fixed;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
-}
+} /*barra de navegação*/
 nav a {
   text-decoration: none;
   color: var(--texto1);
   font-family: var(--font2);
   font-size: 13px;
   font-weight: 700;
-
   display: flex;
   justify-content: right;
-}
+} /*os botoes da nav*/
+
 nav a:hover {
   color: var(--superficie);
-}
+} /*efeito  de cor ao passar o mouse nos botões da nav*/
+
 .icons {
   display: flex;
   margin-left: auto;
   gap: 20px;
-}
+}/*icones da mav*/
+
 .icons svg:hover {
-  fill: var(--superficie); /*muda a cor dos icones*/
-}
+  fill: var(--superficie);
+}/*efeito de cor ao passar o mouse nos icones da nav*/
+
 .colecao {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,7 +80,7 @@ nav a:hover {
 }
 .grid-imagens {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
   gap: 10px;
 }
@@ -146,10 +149,11 @@ figcaption {
 }
 .categorias {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 10rem;
+  margin-top: 20vh;
   width: 100%;
-  min-height: 80vh;
+  min-height: auto;
   gap: 20px;
   padding: 0 50px;
 }
@@ -208,11 +212,12 @@ figcaption {
   max-width: 1200px;
   margin: 0 auto;
   gap: 100px;
+ 
 }
 
-#sobre h2,
-#sobre h3,
-#sobre h4 {
+.sobre h2,
+.sobre h3,
+.sobre h4 {
   font-family: var(--font1);
   font-size: 1.5rem;
   letter-spacing: 3px;
@@ -231,22 +236,32 @@ figcaption {
   background-color: var(--detalhes);
   display: inline-block;
 }
-#sobre p {
+.sobre p {
   font-family: var(--leitura4);
   font-weight: 400;
   line-height: 1.8; /*espaço entre as letras*/
   text-align: justify;
+margin-bottom:  100px;
 }
+#sobre{
+padding:50px 0;
+} /*dá o espaço necessario para a ancora encaixar o nome da Aurora*/
 .matriz {
   border-radius: 4px;
   transition: transform 0.5s;
-}
+}/*arredonda a borda da foto da matriz e prepara o hover*/
 .matriz:hover {
   transform: scale(1.03);
-}
-.matriz-texto{
+}/*faz a foto da matriz crescer*/
+.matriz-texto {
   color: var(--superficie);
   font-size: 20px;
   font-family: var(--font1);
   margin: 10px;
+} /*loja matriz- milão*/
+
+.sobre-texto{
+   border-right: solid 1px var(--superficie);
+   padding-right: 40px;
+   margin-right: 40px;
 }
