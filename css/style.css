@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@455&family=Cormorant+Upright:wght@300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root {
   --texto1: #1a1a1a;
@@ -7,7 +7,7 @@
   --fundo: #f9f9f7;
   --superficie: rgb(153, 153, 153);
   --font1: "Playfair Display", serif;
-  --font2: "Baskervville", "Times New Roman", Times, serif;
+  --font2: "Baskervville SC", serif;
   --font3: "Cormorant Upright", serif;
 }
 *,
@@ -37,6 +37,7 @@ nav {
   align-items: center;
   position: fixed;
   width: 100vw;
+  z-index: 1;
 }
 nav a {
   text-decoration: none;
@@ -144,10 +145,12 @@ figcaption {
 }
 .categorias {
   display: flex;
-  justify-content: space-evenly; 
-  margin-top: 200px;
+  justify-content: center; 
+  margin-top: 10rem;
   width: 100%;
-  height: 100vh;
+ min-height: 80vh;
+  gap: 20px;
+  padding: 0 50px;
 
 }
 .categorias section {
@@ -159,13 +162,17 @@ figcaption {
   font-size: 14px;
   letter-spacing: 5px; 
   text-decoration: underline;
-  text-underline-offset: 15px;
+  text-underline-offset: 20px;
   text-decoration-color: var(--detalhes);
   text-transform: uppercase;
+}
+.texto-categorias{
+ padding-top: 20px;
 }
 
 .categorias img {
   max-width: 100%;
+  max-height: 70%;
   object-fit: cover;
   transition:
     transform 0.5s ease-in-out,
@@ -183,14 +190,25 @@ figcaption {
   font-weight: 800;
   font-size: 80px;
 }
-.destaque{
-  color: var(--texto1);
+.sitacao{
   font-family: var(--font3);
-  font-size: 30px;
+  font-size: 20px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--superficie);
 }
 .box-destaque{
   display: grid;
   justify-content: center;
  text-align: center;
  margin: 100px;
+}
+.sobre-box {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  width: 90%;            
+  max-width: 1200px;     
+  margin: 0 auto;        
+  gap: 80px;            
 }
