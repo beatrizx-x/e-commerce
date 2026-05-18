@@ -58,11 +58,11 @@ nav a:hover {
   display: flex;
   margin-left: auto;
   gap: 20px;
-}/*icones da mav*/
+} /*icones da mav*/
 
 .icons svg:hover {
   fill: var(--superficie);
-}/*efeito de cor ao passar o mouse nos icones da nav*/
+} /*efeito de cor ao passar o mouse nos icones da nav*/
 
 .colecao {
   display: grid;
@@ -212,7 +212,6 @@ figcaption {
   max-width: 1200px;
   margin: 0 auto;
   gap: 100px;
- 
 }
 
 .sobre h2,
@@ -241,18 +240,18 @@ figcaption {
   font-weight: 400;
   line-height: 1.8; /*espaço entre as letras*/
   text-align: justify;
-margin-bottom:  100px;
+  margin-bottom: 100px;
 }
-#sobre{
-padding:50px 0;
+#sobre {
+  padding: 50px 0;
 } /*dá o espaço necessario para a ancora encaixar o nome da Aurora*/
 .matriz {
   border-radius: 4px;
   transition: transform 0.5s;
-}/*arredonda a borda da foto da matriz e prepara o hover*/
+} /*arredonda a borda da foto da matriz e prepara o hover*/
 .matriz:hover {
   transform: scale(1.03);
-}/*faz a foto da matriz crescer*/
+} /*faz a foto da matriz crescer*/
 .matriz-texto {
   color: var(--superficie);
   font-size: 20px;
@@ -260,8 +259,146 @@ padding:50px 0;
   margin: 10px;
 } /*loja matriz- milão*/
 
-.sobre-texto{
-   border-right: solid 1px var(--superficie);
-   padding-right: 40px;
-   margin-right: 40px;
+.sobre-texto {
+  border-right: solid 1px var(--superficie);
+  padding-right: 40px;
+  margin-right: 40px;
+}
+
+/*formulario de contato*/
+
+/* Reset dos campos — padrão profissional */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+/* Anel de foco visível */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--texto1);
+  box-shadow: 0 0 0 1px var(--texto1);
+}
+.contate-nos {
+  margin: 80px 0;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  gap: 20px;
+}
+.contate-nos h1 {
+  font-family: var(--font1);
+  font-size: 30px;
+  font-weight: 800;
+}
+.contate-nos p {
+  width: 50%;
+  font-family: var(--leitura4);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 2px;
+}
+
+.campo {
+  min-width: 40vw;
+  margin: 20px;
+  transition: transform 0.8s;
+}
+.campo:hover {
+  transform: scale(1.01);
+}
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  display: none; /*tira as legendas visualmente mas mantem para leitores de tela */
+}
+button {
+  width: 100px;
+  height: 30px;
+  border-radius: 15px;
+  font-family: var(--leitura4);
+  font-weight: 500;
+  border-color: var(--superficie);
+}
+button:hover {
+  background-color: #e0e0e0;
+}
+.maps-table {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 500px;
+}
+.maps-table img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+  
+}
+.maps-table img:hover{
+transform: scale(1.03);
+}
+.loja-blumenau {
+  /*texto figcaption*/
+  color: var(--superficie);
+  font-size: 15px;
+  font-family: var(--font1);
+}
+table {
+  width: 100%;
+  text-align: center;
+  font-family: var(--leitura4);
+  font-size: 15px;
+}
+table caption {
+  font-family: var(--font1);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--texto1);
+}
+th {
+  border-bottom: 1px solid var(--detalhes);
+  padding: 10px;
+  letter-spacing: 3px;
+}
+
+td { /*dá espaço entre as linhas horizontal*/
+  padding: 12px 10px;
+  text-align: center;
+}
+
+tfoot td {
+  padding-top: 20px;
+  font-style: italic;
+  color: var(--superficie);
+}
+.conteudo-contato{
+   width: 100%;
+   flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-top: 50px;
 }
