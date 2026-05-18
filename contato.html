@@ -37,5 +37,83 @@
         </svg></a>
     </span>
   </nav>
- 
   <header class="hero"></header>
+  <main id="contato" class="formulario"> <!--formulario-->
+  <div class="contate-nos">
+    <h1>CONTATE-NÓS</h1> 
+     <p>Queremos proporcionar a você a experiência de compra perfeita! Por isso, temos diversas equipes
+            disponíveis para tirar suas dúvidas. Você também pode encontrar as perguntas e respostas mais
+            comuns em nosso <a href="faq.html">FAQ</a></p></div>
+            <div class="conteudo-contato">
+    <form action="obrigado.html" method="post">
+      <fieldset>
+        <legend>Dados Pessoais</legend>
+        <div class="campo">
+          <label for="nome">Nome Completo</label>
+          <input type="text" id="nome" placeholder="Seu Nome Completo" required minlength="3">
+         <!--id deve ser igual ao for . required serve para colocar como obrigatorio e minlength significa minimo de x linhas-->
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label> <input type="email" id="email" name="email" placeholder="seu email" required>
+        </div>
+        <div class="campo">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" 
+          pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" placeholder="(+55) 99999-9999" required>
+        </div>
+        <div class="campo">
+          <label for="checkbox">aceito os termos de
+            <a href="#"> Uso</a></label>
+          <input class="checkbox" type="checkbox" id="checkbox" name="checkbox" required>
+        </div>
+      </fieldset>
+      <fieldset class="campo">
+        <legend>Mensagem</legend>
+        <select id="assunto" name="assunto" required>
+          <option value="">selecione o assunto</option>
+          <option value="Devoluções">Devoluções</option>
+          <option value="Reclamações">Reclamações</option>
+          <option value="Sugestões">Sugestões</option>
+          <option value="outros">Outros</option>
+        </select>
+        <!-- Área de texto -->
+        <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem aqui" rows="5" minlength="10" required></textarea>
+
+      </fieldset>
+      <button type="submit">ENVIAR</button>
+    </form>
+    <div class="maps-table">
+    <figure><a href="http://127.0.0.1:5500/img.jpg/localiza%C3%A7%C3%A3o%20aura%20vera.png"><img src="img.jpg/localização aura vera.png" alt="localização da loja Aurora véra no google maps" width="400" height="300" loading="lazy"></a>
+    <figcaption class="loja-blumenau">loja em blumenau</figcaption></figure>
+    <!--cria uma tabela-->
+    <table>
+      <caption>Horário de Funcionamento</caption>
+      <thead> <!--Ela agrupa o conteúdo que serve como título das colunas.-->
+        <tr>
+          <th scope="col">Dias</th> <!--É uma célula de cabeçalho. Por padrão, o navegador deixa o texto em negrito e centralizado.-->
+          <th scope="col">Horário</th>
+          <!--scope="col": Isso é um atributo de acessibilidade. Ele avisa aos leitores de tela (para pessoas com deficiência visual) que aquele título vale para toda a coluna abaixo dele.-->
+        </tr>
+      </thead>
+      <tbody><!--É aqui que fica o conteúdo principal e a maior parte dos dados .as linhas com os dias da semana e os horários-->
+        <tr>
+          <td>seg-sex</td> <!--É onde você coloca as informações normais da tabela.-->
+          <td>09:00 - 18:00</td>
+        </tr>
+        <tr><!--Representa uma linha horizonta-->
+          <td>Sábado</td>
+          <td>10:00 - 16:00</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2">Domingo: fechado</td>
+          <!--colspan="2": Esse atributo diz para a célula: "Ocupe o espaço de duas colunas".-->
+        </tr>
+      </tfoot>
+    </table></div></div>
+
+  </main>
+</body>
+
+</html>
