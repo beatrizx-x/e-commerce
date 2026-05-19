@@ -5,7 +5,7 @@
   --texto2: #fefefe;
   --detalhes: #c5a059;
   --fundo: #f9f9f7;
-  --superficie: rgb(153, 153, 153);
+  --superficie: #999;
   --font1: "Playfair Display", serif;
   --font2: "Baskervville SC", serif;
   --font3: "Cormorant Upright", serif;
@@ -20,8 +20,17 @@
 }
 body {
   background-color: var(--fundo);
+
+}
+.logo
+{
+  font-family: var(--font2);
+  font-weight: 800;
+  font-size: 30px;
+
 }
 .hero {
+  width: 100%;
   height: 100vh;
   background-image: url("../img.jpg/homenss.jpg");
   background-size: cover;
@@ -29,26 +38,32 @@ body {
   background-repeat: no-repeat;
 } /*imagem de destaque dos tres modelos*/
 
+.nav-links {
+   display: flex;
+  justify-content: center;
+  gap: 30px;
+
+}
 nav {
   background-color: var(--fundo);
   display: flex;
-  padding: 0 30px;
-  height: 50px;
-  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 3%;
+ min-height: 40px;
   align-items: center;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
 } /*barra de navegação*/
-nav a {
+.nav-links a {
   text-decoration: none;
   color: var(--texto1);
   font-family: var(--font2);
   font-size: 13px;
   font-weight: 700;
-  display: flex;
-  justify-content: right;
-} /*os botoes da nav*/
+ 
+}/*os botoes da nav*/
 
 nav a:hover {
   color: var(--superficie);
@@ -56,14 +71,16 @@ nav a:hover {
 
 .icons {
   display: flex;
-  margin-left: auto;
   gap: 20px;
+  justify-content: flex-end;
 } /*icones da mav*/
 
 .icons svg:hover {
   fill: var(--superficie);
 } /*efeito de cor ao passar o mouse nos icones da nav*/
 
+
+/*as duas imagens da nova coleção destacada*/
 .colecao {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -78,11 +95,11 @@ nav a:hover {
     transform 0.8s ease,
     opacity 0.3s;
 }
-.grid-imagens {
+.grid-imagens { /* as imagens da coleção*/
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width: 100%;
-  gap: 10px;
+  gap: 20px;
 }
 .colecao {
   display: flex;
@@ -108,16 +125,17 @@ nav a:hover {
 
 .intro-colecao p {
   font-family: var(--font3);
-  font-size: 1.1rem;
-  max-width: 500px;
+  font-size: 1.3rem;
+  max-width: 600px;
   margin: 0 auto;
   color: var(--superficie);
   font-weight: 900;
+  font-style: italic;
 }
 .box-colecao img {
   width: 100%;
   object-fit: cover;
-  object-position: 0 20px;
+  object-position: center;
 }
 .box-colecao:hover {
   opacity: 0.8;
@@ -130,22 +148,25 @@ nav a:hover {
 }
 
 .botao-colecao-comprar {
-  text-decoration: none;
   color: var(--texto2);
   font-family: var(--font3);
-  font-weight: 500;
-  font-size: medium;
+  font-weight: 900;
+  font-size: 20px;
   text-decoration: underline;
   text-underline-offset: 10px;
   text-decoration-color: var(--detalhes);
   display: flex;
   justify-content: center;
+
+}
+.botao-colecao-comprar:hover{
+color: var(--detalhes);
 }
 figcaption {
   color: var(--texto2);
   font-family: var(--font1);
   font-size: xx-large;
-  font-weight: 500;
+  font-weight: 700;
 }
 .categorias {
   display: flex;
@@ -154,9 +175,10 @@ figcaption {
   margin-top: 20vh;
   width: 100%;
   min-height: auto;
-  gap: 20px;
-  padding: 0 50px;
+  gap: 15px;
+  padding: 15px;
 }
+
 .categorias section {
   display: flex;
   flex-direction: column;
@@ -186,6 +208,9 @@ figcaption {
   opacity: 0.8;
   transform: scale(1.03);
 }
+
+/*pagina sobre*/
+
 .auravera {
   color: var(--texto1);
   font-family: var(--font1);
@@ -199,19 +224,20 @@ figcaption {
   font-style: italic;
   color: var(--superficie);
 }
-.box-destaque {
+.box-destaque { /* é todo o conteudo, o texto aura vera, sobre e as imagens */
   display: grid;
   justify-content: center;
   text-align: center;
-  margin: 100px;
+  margin: 0 100px;
+ 
 }
-.sobre-box {
+.sobre-box {/*apenas o sobre e as imagens*/
   display: flex;
-  align-items: flex-start;
+
   justify-content: center;
   max-width: 1200px;
-  margin: 0 auto;
-  gap: 100px;
+  margin:  auto;
+  gap: 20px;
 }
 
 .sobre h2,
@@ -255,7 +281,7 @@ figcaption {
 .matriz-texto {
   color: var(--superficie);
   font-size: 20px;
-  font-family: var(--font1);
+  font-family: var(--font3);
   margin: 10px;
 } /*loja matriz- milão*/
 
@@ -350,7 +376,7 @@ button:hover {
   max-width: 500px;
 }
 .maps-table img {
-  width: 100%;
+  width: 400px;
   height: auto;
   border-radius: 4px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
@@ -364,7 +390,7 @@ transform: scale(1.03);
   /*texto figcaption*/
   color: var(--superficie);
   font-size: 15px;
-  font-family: var(--font1);
+  font-family: var(--font3);
 }
 table {
   width: 100%;
@@ -401,4 +427,134 @@ tfoot td {
   justify-content: center;
   gap: 90px;
   margin-top: 50px;
+}
+
+/*card com as novas coleções*/
+
+.row{
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+.card{
+  border: none;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+.card:hover{ /*peguei esse filtro do site cssfilter*/
+  transform: scale(1.02);
+   position: relative;
+  -webkit-filter: contrast(90%) brightness(110%) saturate(150%) hue-rotate(-10deg);
+  filter: contrast(90%) brightness(110%) saturate(150%) hue-rotate(-10deg);
+}
+.card-img-top {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; 
+}
+.nova-colecao {
+  display: flex;
+  flex-direction: column;
+text-align: center;
+padding: 100px;
+gap: 20px;
+}
+.nova-colecao h1{
+  font-family: var(--font1);
+  font-size:2.3rem;
+
+}
+.nova-colecao p{
+  font-family: var(--font2);
+  letter-spacing: 5px;
+  font-size: 1.3rem;
+
+}
+
+/*botão de categorias*/
+
+/* Container que segura o botão e o menu */
+.nav-item-mega {
+  position: static; /* Importante para o menu usar a tela toda como referência */
+}
+
+/* O Menu escondido */
+.mega-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100vw;
+  background-color: white;
+  border-bottom: 1px solid var(--superficie);
+  z-index: 999;
+  padding: 40px 0;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.05);
+}
+.mega-menu::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background-color: transparent; 
+}
+
+/* Mostra ao passar o mouse */
+.nav-item-mega:hover .mega-menu {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Alinhamento das colunas dentro do menu */
+.mega-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 50px;
+}
+
+.mega-col h3 {
+  font-family: var(--font1);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  color: var(--superficie); 
+}
+
+.mega-col a {
+  display: block;
+  text-decoration: none;
+  color: var(--texto1);
+  font-family: var(--leitura4);
+  font-size: 13px;
+  padding: 8px 0;
+  transition: 0.2s;
+}
+
+.mega-col a:hover {
+  color: var(--superficie);
+  padding-left: 5px;
+}
+
+/* Estilo da Imagem Destaque */
+.mega-img img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  object-position:center;
+  margin-bottom: 10px;
+}
+
+.mega-img p {
+  font-size: 11px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
 }
