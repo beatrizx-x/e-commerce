@@ -562,12 +562,12 @@ gap: 20px;
 footer{
   display: flex;
   justify-content: space-evenly;
-  
+
 }
 .box-footer{
   display: flex;
   flex-direction: column;
-
+  
 }
 footer h1{
   font-family: var(--font1);
@@ -575,4 +575,13 @@ footer h1{
   font-weight: 800;
   line-height:50px;
   letter-spacing: 2px;
+ 
+}
+footer a{
+  font-family: var(--leitura4);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500; 
+  text-decoration: none;
+  color: var();
 }
