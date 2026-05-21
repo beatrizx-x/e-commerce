@@ -560,19 +560,93 @@ gap: 20px;
 /*footer*/
 
 footer{
+  padding: 50px;
+  background-color: var(--superficie);
   display: flex;
   justify-content: space-evenly;
-  
+
 }
 .box-footer{
   display: flex;
   flex-direction: column;
-
+  
 }
 footer h1{
+  color: var(--texto1);
   font-family: var(--font1);
   font-size: 15px;
   font-weight: 800;
   line-height:50px;
   letter-spacing: 2px;
+ 
+}
+footer a{
+  color: var(--texto1);
+  font-family: var(--leitura4);
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500; 
+  text-decoration: none;
+  color: var(--texto1);
+}
+.fa-brands{
+  font-size: 30px;
+margin: 10px;
+}
+/*pagina da bolsa*/
+.bolsa{
+  margin: 200px ;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+}
+.bolsa figure{
+  background-color: var(--superficie);
+  width:500px;
+  height: 580px;
+  padding-top: 50px ;
+  border-radius: 4px;
+  transition: transform 0.2s;
+}
+.bolsa img{
+  display: flex;
+ margin: 0 auto;
+ object-fit: cover;
+height: 400px;
+object-position: bottom;
+border-radius: 4px;
+}
+.bolsa figcaption{
+  display: none;
+}
+.bolsa h1{
+  font-family: var(--font2);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 10px ;
+}
+.bolsa p{
+  font-family: var(--leitura4);
+  color: var(--texto1);
+text-align: center;
+padding-top: 15px;
+}
+.bolsa div{
+display: flex;
+justify-content: center;
+padding-top: 15px;
+
+}
+.fa-heart{
+color: var(--texto1);
+ margin-left: 10px;
+ transition: transform 0.2s;
+}
+.fa-heart:hover{
+  transform: scale(1.5);
+}
+
+.bolsa figure:hover{
+  transform: scale(1.03);
 }
