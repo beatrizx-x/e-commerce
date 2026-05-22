@@ -270,7 +270,7 @@ figcaption {
 .sobre p {
   font-family: var(--leitura4);
   font-weight: 400;
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.5rem; /*espaço entre as letras*/
   text-align: justify;
   margin-bottom: 100px;
@@ -588,16 +588,22 @@ footer h1{
   color: var(--texto1);
   font-family: var(--font1);
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 900;
   line-height:50px;
   letter-spacing: 2px;
  
+}
+.copy{
+  font-family: var(--font2);
+  font-weight: 900;
+  font-size: 20px;
 }
 footer a{
   color: var(--texto1);
   font-family: var(--leitura4);
   font-size: 13px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  line-height: 25px;
   font-weight: 500; 
   text-decoration: none;
   color: var(--texto1);
