@@ -253,7 +253,7 @@ figcaption {
   font-size: 1.5rem;
   letter-spacing: 3px;
   text-transform: uppercase; /*tudo maiusculo*/
-  margin-bottom: 1rem;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   gap: 15px;
